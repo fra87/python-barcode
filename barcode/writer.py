@@ -284,7 +284,7 @@ class BaseWriter:
                 # Split the ean into its blocks
                 self.text = self.text.split(" ")
 
-                ypos += pt2mm(self.font_size)
+                ypos += pt2mm(self.font_size) + self.text_distance
 
                 blocks = self.text
                 for text_, xpos in zip(blocks, text["xpos"]):
